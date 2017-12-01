@@ -3,7 +3,9 @@ stevetest
 =========
 
 Stevetest is a stevedore based python unittest loader. It enables you to
-integrate any unittest base python test suite into a single entrypoint.
+integrate any `unittest`_ based python test suite into a single entrypoint.
+
+.. _unittest: https://docs.python.org/3/library/unittest.html
 
 Creating a plugin
 -----------------
@@ -14,8 +16,10 @@ class that inherits from the ``stevetest.plugin.Plugin`` abstract class and
 define the load_tests method on the class.
 
 Then you just expose the setuptools entry point in the
-``stevetest.test_plugins`` namespace. If you are using pbr this is fairly
+``stevetest.test_plugins`` namespace. If you are using `pbr`_ this is fairly
 straightforward, in the setup.cfg just add something like the following:
+
+.. _pbr: https://docs.openstack.org/pbr/latest/
 
 .. code-block:: ini
 
