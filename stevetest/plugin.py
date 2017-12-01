@@ -38,8 +38,14 @@ class Plugin(object):
     def load_tests(self):
         """Return the information necessary to load the tests in the plugin.
 
+        This method will return the discovery paths needed to run unittest
+        discovery on the plugin's test suite. These are defined in:
+        https://docs.python.org/3/library/unittest.html#test-discovery
+
         :return: a tuple with the first value being the test_dir and the second
-                 being the top_level
+                 being the top_level. These map to ``--start-directory`` and
+                 ``--top-level-directory`` from the unittest discover command
+                 respectively
         :rtype: tuple
         """
         return
